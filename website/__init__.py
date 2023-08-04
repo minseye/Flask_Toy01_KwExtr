@@ -13,11 +13,11 @@ def create_app():
     
     # 블루프린트 인스턴스 가져오기
     from .views import views
-    from .auth import auth
+    from .algorithm import algorithm
 
     # 플라스크 앱에 등록하기
     app.register_blueprint(views, url_prefix='/')
-    app.register_blueprint(auth, url_prefix='/')  
+    app.register_blueprint(algorithm, url_prefix='/') 
 
     # DB에 사용할 모델 불러오기
     from .models import User, Note

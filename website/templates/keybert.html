@@ -1,0 +1,21 @@
+<!-- keybert.html -->
+{% extends "base.html" %}
+{% block title %}keybert - keyword{% endblock %}
+
+{% block content %}
+<form method="POST">
+  <h2 align="center">keyBERT 기반 키워드 추출</h2>
+  <div class="mb-3">
+    <label for="Text" class="form-label">분석할 텍스트</label>
+    <input name="txt" type="text" class="form-control" id="Text">
+  </div>
+  <br/>
+  <div class="mb-3">
+    <p>
+      <h5>keyBERT 기반 키워드 결과</h5>
+      <p>{{keywords}}</p>
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary">분석 시작</button>
+</form>
+{% endblock %}
